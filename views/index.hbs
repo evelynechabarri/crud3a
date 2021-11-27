@@ -1,0 +1,215 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">BEER X</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+
+                    <a class="nav-link" data-scroll href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-scroll href="#novedades">Novedades <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" data-scroll href="#historias">Historia <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" data-scroll href="#nosotros">Nosotros <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" data-scroll href="#conocenos">Conocenos <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+      <div class="container-fluid">
+          <div id="home" class="row aling-items-center hero">
+              <div class="col-lg-3 offset-lg-2">
+                  <p>Bajada</p>
+                  <h1>Titulo principal</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste pariatur nulla culpa voluptas dolores nam, accusamus similique temporibus inventore fuga? Possimus pariatur labore quia velit amet repellat similique excepturi non?</p>
+              </div>
+            </div>
+
+
+            <div id="novedades" class="row py-4">
+                <div class="col-md-5 offset-md-2 py-3">
+                    <h2>Novedades</h2>
+                    <ul class="lista-novedades">
+                        {{#each novedades}}
+                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#modal{{id}}"><img src="{{imagen}}" width="120"> {{titulo}}</a></li>
+                      {{/each}}
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <div class="rounded py-3 testimonios">
+                        <h2 class="text-center">Testimonios</h2>
+                    
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonio">
+                                <h5>"La mejor birra del mundo"</h5>
+                                <p>Luciano, Martinez</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonio">
+                                <h5>"La mejor birra del mundo"</h5>
+                                <p>Flavia, Devoto</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonio">
+                                <h5>"La mejor birra del mundo"</h5>
+                                <p>Erik, Mataderos</p>
+                            </div>
+                        </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+            </div> 
+        </div>
+        <!--Modal-->
+        {{#each novedades}}
+        <div class="modal fade" id="modal{{id}}" data-backdrop="static" data-keiboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+                <div class=",modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="staticBackdropLabel">{{titulo}}</h1>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>{{subtitulo}}</h3>
+                        <img src="{{imagen}}" alt="{{titulo}}" />
+                        <p>{{cuerpo}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+          <!-- fIN DE MODAL---> 
+      </div><!-- fIN NOVEDADES---> 
+    <div id="historia" class="row align-items-center py4">
+        <div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
+            <img src="images/historia_1.jpg" alt="historia 1" class="img-fluid">
+        </div>
+        <div class="col-lg-2 col-md-3 d-none d-sm-block">
+            <img src="images/historia_2.jpg" alt="historia 2" class="img-fluid">
+        </div>
+        <div class="col-12 d-sm-none">
+            <img src="images/historia_3.jpg" alt="historia 3" class="img-fluid">
+        </div>
+        <div class="col-lg-4 col-md-6 mt-4 mt-sm-0">
+            <h2>Historia</h2>
+            <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt quam voluptatum deleniti, mollitia
+                architecto asperiores quae nobis quis. Odit esse aut temporibus quis enim impedit unde ut voluptatem
+                accusamus reiciendis?</P>
+        </div>
+    </div>
+<!--Fin de historia-->
+<div id="nosotros" class="row align-items-stretch my-3 staff py-4">
+    <div class="col-lg-8 offset-lg-2">
+        <h2>Nosotros</h2>
+        <div class="card-deck">
+            <div class="card">
+                <img src="images/nosotros01.jpg" class="card-img-top" alt="...">
+                <div class="card body">
+                    <h5 class="card-title">Diana Reyes</h5>
+                    <p class="card-text">Some quick exple text to build on the card title and make up the bilk of the card</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/nosotros02.jpg" class="card-img-top" alt="...">
+                <div class="card body">
+                    <h5 class="card-title">Diana Reyes</h5>
+                    <p class="card-text">Some quick exple text to build on the card title and make up the bilk of the card</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/nosotros03.jpg" class="card-img-top" alt="...">
+                <div class="card body">
+                    <h5 class="card-title">Diana Reyes</h5>
+                    <p class="card-text">Some quick exple text to build on the card title and make up the bilk of the card</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/nosotros04.jpg" class="card-img-top" alt="...">
+                <div class="card body">
+                    <h5 class="card-title">Diana Reyes</h5>
+                    <p class="card-text">Some quick exple text to build on the card title and make up the bilk of the card</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---fin de staff-->
+
+<div id="conocenos" class="row py-4">
+    <div class="col-md-4 offset-md-2">
+        <h2>Visitanos</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2274313773396!2d-58.42220428519552!3d-34.59841006472339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb666703c59f%3A0x6f9fd2b57bacdcac!2s%C3%81rea%20de%20Desarrollo%20Profesional%20-%20Pasant%C3%ADas!5e0!3m2!1ses!2sar!4v1634756014753!5m2!1ses!2sar" style="border:0;" allowfullscreen></iframe>
+        </div>
+    </div>
+    <!--Aca formulario-->
+    <div class="col-md-4 mt-4 mt-sm-0">
+      <h2>Contactanos</h2>
+        <form action="/" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="..." name="nombre">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" placeholder="..." name="apellido">
+                </div>
+            </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="ejemplo@email.com" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="tel">Tel</label>
+                    <input type="text" class="form-control" id="tel" placeholder="..." name="tel">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="4" name="mensaje"></textarea>
+                </div>
+                 <button type="submit" class="btn btn-primary">Enviar</button>
+
+            
+        </form>
+
+       <p> {{message}}</p> 
+
+    </div>
+
+</div><!--cierra conocenos-->
+
+
+     <footer>
+                <p class="text-center">Diseñado por Evelyn Echabarri</p>
+    </footer> 
